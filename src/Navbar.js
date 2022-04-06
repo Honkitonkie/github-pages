@@ -1,11 +1,13 @@
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Link } from "react-router-dom";
+
 
 const navigation = [
-  { name: "Portfolio", href: "/", current: true },
+  { name: "Portfolio", href: "/github-pages/", current: true },
   { name: "Work", href: "https://www.projecten.automatin.nl", current: false },
   { name: "Contact", href: "mailto:info@automatin.nl", current: false },
-  { name: "About (Dutch only)", href: "https://patientje.nl/meerinfo.html", current: false },
+  { name: "About", href: "https://patientje.nl/meerinfo.html", current: false },
 ];
 
 
@@ -31,17 +33,28 @@ export default function Navbar() {
               <div className='hidden sm:block sm:ml-6'>
                 <div className='flex space-x-4'>
                   {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className={classNames(
-                        item.current ? "bg-grey-100 text-grey-900 hover:ring-2 hover:ring-grey-100" : "text-grey-100 hover:bg-grey-100 hover:text-grey-900",
-                        "px-3 py-2 rounded-md text-sm font-medium"
+                    <div key={item.name}>
+                      {item.name !== "About" && (
+                        <a
+                          href={item.href}
+                          className={classNames(
+                            item.current ? "bg-grey-100 text-grey-900 hover:ring-2 hover:ring-grey-100" : "text-grey-100 hover:bg-grey-100 hover:text-grey-900",
+                            "px-3 py-2 rounded-md text-sm font-medium"
+                          )}
+                          aria-current={item.current ? "page" : undefined}
+                        >
+                          {item.name}
+                        </a>
                       )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      {item.name}
-                    </a>
+                      {item.name === "About" && (
+                          <Link to='/about' className={classNames(
+                            item.current ? "bg-grey-100 text-grey-900 hover:ring-2 hover:ring-grey-100" : "text-grey-100 hover:bg-grey-100 hover:text-grey-900",
+                            "px-3 py-2 rounded-md text-sm font-medium"
+                          )}>
+                            About
+                          </Link>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>

@@ -1,17 +1,19 @@
 import React from "react";
-import Card from "./Card";
-import Call from "./Call";
 import Background from "./Background";
 import Container from "./Container";
+import Navbar from "./Navbar";
+import Main from "./Main";
 
 function App() {
   return (
-    <Background>
+    <div>
+      <Navbar />
+      <Background>
         <Container>
-          <Card />
-          <Call />
+          <Main />
         </Container>
-    </Background>
+      </Background>
+    </div>
   );
 }
 
