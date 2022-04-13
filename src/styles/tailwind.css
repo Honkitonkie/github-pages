@@ -740,6 +740,14 @@ input[type=file]::file-selector-button:hover{
   margin-top: 1rem;
 }
 
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
 .mt-12{
   margin-top: 3rem;
 }
@@ -748,16 +756,12 @@ input[type=file]::file-selector-button:hover{
   margin-top: 0px;
 }
 
-.mb-2{
-  margin-bottom: 0.5rem;
+.mt-8{
+  margin-top: 2rem;
 }
 
-.mt-40{
-  margin-top: 10rem;
-}
-
-.mt-2{
-  margin-top: 0.5rem;
+.mt-5{
+  margin-top: 1.25rem;
 }
 
 .block{
@@ -842,6 +846,10 @@ input[type=file]::file-selector-button:hover{
 
 .max-w-xs{
   max-width: 20rem;
+}
+
+.flex-none{
+  flex: none;
 }
 
 .flex-col{
@@ -933,11 +941,6 @@ input[type=file]::file-selector-button:hover{
   border-color: rgb(51 51 51 / var(--tw-border-opacity));
 }
 
-.border-indigo-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(104 117 245 / var(--tw-border-opacity));
-}
-
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1004,6 +1007,11 @@ input[type=file]::file-selector-button:hover{
   padding-right: 1rem;
 }
 
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1032,8 +1040,8 @@ input[type=file]::file-selector-button:hover{
   padding-top: 0.5rem;
 }
 
-.pb-3{
-  padding-bottom: 0.75rem;
+.pb-10{
+  padding-bottom: 2.5rem;
 }
 
 .pt-1{
@@ -1042,6 +1050,10 @@ input[type=file]::file-selector-button:hover{
 
 .pb-2{
   padding-bottom: 0.5rem;
+}
+
+.pb-3{
+  padding-bottom: 0.75rem;
 }
 
 .text-left{
@@ -1090,6 +1102,10 @@ input[type=file]::file-selector-button:hover{
   font-weight: 500;
 }
 
+.font-semibold{
+  font-weight: 600;
+}
+
 .font-extralight{
   font-weight: 200;
 }
@@ -1098,8 +1114,8 @@ input[type=file]::file-selector-button:hover{
   font-weight: 400;
 }
 
-.font-semibold{
-  font-weight: 600;
+.capitalize{
+  text-transform: capitalize;
 }
 
 .leading-3{
@@ -1121,6 +1137,11 @@ input[type=file]::file-selector-button:hover{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-linkedin{
+  --tw-text-opacity: 1;
+  color: rgb(0 119 181 / var(--tw-text-opacity));
+}
+
 .text-grey-900{
   --tw-text-opacity: 1;
   color: rgb(51 51 51 / var(--tw-text-opacity));
@@ -1139,11 +1160,6 @@ input[type=file]::file-selector-button:hover{
 .text-gray-600{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
-.text-linkedin{
-  --tw-text-opacity: 1;
-  color: rgb(0 119 181 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -1202,6 +1218,11 @@ input[type=file]::file-selector-button:hover{
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-grey-900:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-gray-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -1217,9 +1238,9 @@ input[type=file]::file-selector-button:hover{
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-grey-900:hover{
+.hover\:bg-yellow-100:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+  background-color: rgb(253 246 178 / var(--tw-bg-opacity));
 }
 
 .hover\:text-linkedin:hover{
@@ -1232,6 +1253,11 @@ input[type=file]::file-selector-button:hover{
   color: rgb(51 51 51 / var(--tw-text-opacity));
 }
 
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .hover\:text-grey-100:hover{
   --tw-text-opacity: 1;
   color: rgb(245 245 245 / var(--tw-text-opacity));
@@ -1240,11 +1266,6 @@ input[type=file]::file-selector-button:hover{
 .hover\:text-grey-900:hover{
   --tw-text-opacity: 1;
   color: rgb(51 51 51 / var(--tw-text-opacity));
-}
-
-.hover\:text-white:hover{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover{
@@ -1366,6 +1387,10 @@ input[type=file]::file-selector-button:hover{
     flex-direction: row;
   }
 
+  .md\:flex-wrap{
+    flex-wrap: wrap;
+  }
+
   .md\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1393,7 +1418,7 @@ input[type=file]::file-selector-button:hover{
 }
 
 @media (min-width: 1280px){
-  .xl\:mt-4{
-    margin-top: 1rem;
+  .xl\:mt-8{
+    margin-top: 2rem;
   }
 }
