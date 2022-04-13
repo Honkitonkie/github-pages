@@ -4,8 +4,10 @@ module.exports = {
     extend: {
       container: {
         padding: {
+          center: true,
+          xs: "0.5rem",
           DEFAULT: "1rem",
-          sm: "4rem",
+          sm: "2rem",
           lg: "4rem",
           xl: "5rem",
         },
