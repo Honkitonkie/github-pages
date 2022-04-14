@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.5167da34.css",
-    "main.js": "/static/js/main.f54aa075.js",
-    "static/media/kelly-sikkema-paper.jpg": "/static/media/kelly-sikkema-paper.52094bc42c5a07accb51.jpg",
-    "static/media/kelly-sikkema-paper-clean.jpg": "/static/media/kelly-sikkema-paper-clean.3b13541c0e4b6092c13b.jpg",
-    "static/media/application-letter.jpg": "/static/media/application-letter.87ce00c0bf9c170bbf4e.jpg",
-    "static/media/drop.jpg": "/static/media/drop.070f286e3ffd5040bd9c.jpg",
-    "static/media/duncan.jpg": "/static/media/duncan.35d7b30ac6ac1331a049.jpg",
-    "index.html": "/index.html",
-    "main.5167da34.css.map": "/static/css/main.5167da34.css.map",
-    "main.f54aa075.js.map": "/static/js/main.f54aa075.js.map"
+    "main.css": "/github-pages/static/css/main.5167da34.css",
+    "main.js": "/github-pages/static/js/main.e5cc0fec.js",
+    "static/media/kelly-sikkema-paper.jpg": "/github-pages/static/media/kelly-sikkema-paper.52094bc42c5a07accb51.jpg",
+    "static/media/kelly-sikkema-paper-clean.jpg": "/github-pages/static/media/kelly-sikkema-paper-clean.3b13541c0e4b6092c13b.jpg",
+    "static/media/application-letter.jpg": "/github-pages/static/media/application-letter.87ce00c0bf9c170bbf4e.jpg",
+    "static/media/drop.jpg": "/github-pages/static/media/drop.070f286e3ffd5040bd9c.jpg",
+    "static/media/duncan.jpg": "/github-pages/static/media/duncan.35d7b30ac6ac1331a049.jpg",
+    "index.html": "/github-pages/index.html",
+    "main.5167da34.css.map": "/github-pages/static/css/main.5167da34.css.map",
+    "main.e5cc0fec.js.map": "/github-pages/static/js/main.e5cc0fec.js.map"
   },
   "entrypoints": [
     "static/css/main.5167da34.css",
-    "static/js/main.f54aa075.js"
+    "static/js/main.e5cc0fec.js"
   ]
 }
