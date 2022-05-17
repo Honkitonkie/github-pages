@@ -68,7 +68,7 @@ export default function Navbar() {
                           {item.name}
                         </a>
                       )}
-                      {!item.external("/") && (
+                      {!item.external && (
                         <Link
                           onClick={() => {
                             changeCurrent(index);
