@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import backgroundImage from "./images/kelly-sikkema-paper-clean.jpg";
 
 const navigation = [
-  { name: "Portfolio", href: "home", current: false, external: false },
+  { name: "Portfolio", href: "/home", current: false, external: false },
   { name: "About", href: "about", current: false, external: false },
   { name: "Exercises", href: "exercises", current: false, external: false },
   { name: "Projects", href: "https://www.projects.automatin.nl", current: false, external: true },
