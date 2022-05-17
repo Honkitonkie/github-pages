@@ -1,32 +1,25 @@
 import { Disclosure } from "@headlessui/react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 import backgroundImage from "./images/kelly-sikkema-paper-clean.jpg";
 
 const navigation = [
   { name: "Portfolio", href: "/home", current: false, external: false },
-  { name: "About", href: "about", current: false, external: false },
-  { name: "Exercises", href: "exercises", current: false, external: false },
+  { name: "About", href: "/about", current: false, external: false },
+  { name: "Exercises", href: "/exercises", current: false, external: false },
   { name: "Projects", href: "https://www.projects.automatin.nl", current: false, external: true },
   { name: "Contact", href: "mailto:info@automatin.nl", current: false, external: true },
 ];
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Navbar() {
-  useEffect(() => {
-    navigation.map((x) => {
-      if (x.name === window.location.pathname) {
-        setCurrent(x);
-      }
-    });
-  });
-  const [current, setCurrent] = useState(null);
-
-  const changeCurrent = function (curr) {
+  const [current, setCurrent] = useState();
+  const changeCurrent = function(curr) {
     for (let nav in navigation) {
       navigation[nav]["current"] = false;
     }
@@ -62,9 +55,9 @@ export default function Navbar() {
                     <div key={item.name}>
                       {item.external && (
                         <a
-                          onClick={() => {
-                            changeCurrent(index);
-                          }}
+                        onClick={() => {
+                          changeCurrent(index);
+                        }}
                           className={classNames(
                             item.current ? "bg-grey-100 text-grey-900 hover:ring-2 hover:ring-grey-100" : "text-grey-100 hover:bg-grey-100 hover:text-grey-900",
                             "px-3 py-2 rounded-md text-sm font-medium"
@@ -75,7 +68,7 @@ export default function Navbar() {
                           {item.name}
                         </a>
                       )}
-                      {!item.external && (
+                      {!item.external("/") && (
                         <Link
                           onClick={() => {
                             changeCurrent(index);
