@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import backgroundImage from "./images/kelly-sikkema-paper-clean.jpg";
 
 const navigation = [
-  { name: "Portfolio", href: "/home", current: false, external: false },
-  { name: "About", href: "/about", current: false, external: false },
-  { name: "Exercises", href: "/exercises", current: false, external: false },
-  { name: "Projects", href: "https://www.projects.automatin.nl", current: false, external: true },
-  { name: "Contact", href: "mailto:info@automatin.nl", current: false, external: true },
+  { name: "Portfolio", href: "/home", external: false },
+  { name: "About", href: "/about", external: false },
+  { name: "Exercises", href: "/exercises", external: false },
+  { name: "Projects", href: "https://www.projects.automatin.nl", external: true },
+  { name: "Contact", href: "mailto:info@automatin.nl", external: true },
 ];
 
 
@@ -18,14 +18,12 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
-  const [current, setCurrent] = useState();
-  const changeCurrent = function(curr) {
-    for (let nav in navigation) {
-      navigation[nav]["current"] = false;
-    }
-    navigation[curr].current = true;
-    setCurrent(curr);
+  const [current, setCurrent] = useState(0);
+
+  const changeCurrent = function (index) {
+    setCurrent(navigation[index]);
   };
+
 
   return (
     <Disclosure
@@ -55,11 +53,12 @@ export default function Navbar() {
                     <div key={item.name}>
                       {item.external && (
                         <a
-                        onClick={() => {
-                          changeCurrent(index);
-                        }}
+                          onClick={() => {
+                            changeCurrent(navigation[index]);
+                          }}
+                          target="_blank"
                           className={classNames(
-                            item.current ? "bg-grey-100 text-grey-900 hover:ring-2 hover:ring-grey-100" : "text-grey-100 hover:bg-grey-100 hover:text-grey-900",
+                            current ? "bg-grey-100 text-grey-900 hover:ring-2 hover:ring-grey-100" : "text-grey-100 hover:bg-grey-100 hover:text-grey-900",
                             "px-3 py-2 rounded-md text-sm font-medium"
                           )}
                           aria-current={item.current ? "page" : undefined}
@@ -71,11 +70,11 @@ export default function Navbar() {
                       {!item.external && (
                         <Link
                           onClick={() => {
-                            changeCurrent(index);
+                            changeCurrent(navigation[index]);
                           }}
                           to={item.href}
                           className={classNames(
-                            item.current ? "bg-grey-100 text-grey-900 hover:ring-2 hover:ring-grey-100" : "text-grey-100 hover:bg-grey-100 hover:text-grey-900",
+                            current ? "bg-grey-100 text-grey-900 hover:ring-2 hover:ring-grey-100" : "text-grey-100 hover:bg-grey-100 hover:text-grey-900",
                             "px-3 py-2 rounded-md text-sm font-medium"
                           )}
                         >
@@ -92,18 +91,36 @@ export default function Navbar() {
           <Disclosure.Panel className='sm:hidden'>
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigation.map((item, index) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as='a'
-                  onClick={() => {
-                    changeCurrent(index);
-                  }}
-                  href={item.href}
-                  className={classNames(item.current ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white", "block px-3 py-2 rounded-md text-base font-medium")}
-                  aria-current={item.current ? "page" : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
+                <div key={item.name}>
+                  {item.external && (
+                    <Disclosure.Button
+                      as='a'
+                      target="_blank"
+                      onClick={() => {
+                        changeCurrent(navigation[index]);
+                      }}
+                      href={item.href}
+                      className={classNames(item.current ? "bg-gray-900 text-white" : "text-gray-100 hover:bg-gray-700 hover:text-white", "block px-3 py-2 rounded-md text-base font-medium")}
+                      aria-current={item.current ? "page" : undefined}
+                    >
+                      {item.name}
+                    </Disclosure.Button>
+                  )}
+                  {!item.external && (
+                    <Disclosure.Button>
+                      <Link
+                        onClick={() => {
+                          changeCurrent(navigation[index]);
+                        }}
+                        to={item.href}
+                        className={classNames(item.current ? "bg-gray-900 text-white" : "text-gray-100 hover:bg-gray-700 hover:text-white", "block px-3 py-2 rounded-md text-base font-medium")}
+                        aria-current={item.current ? "page" : undefined}
+                      >
+                        {item.name}
+                      </Link>
+                    </Disclosure.Button>
+                  )}
+                </div>
               ))}
             </div>
           </Disclosure.Panel>

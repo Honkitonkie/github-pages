@@ -1,16 +1,25 @@
 import { Link } from "react-router-dom";
-import applicationLetter from '../images/application-letter.jpg'
-import drop from '../images/drop.jpg'
+import applicationLetter from "../images/application-letter.jpg";
+import drop from "../images/drop.jpg";
 
 const exercises = [
-  { name: "Dropdown", href: "dropdown", description: "A dropdown design, srollable and clickable", image: `${drop}`, current: false },
-  { name: "About", href: "/about", description: "A simple application letter fetching the current date", image: `${applicationLetter}`, current: false },
+  { name: "Dropdown", href: "dropdown", description: "A dropdown design, srollable and clickable", image: `${drop}`, current: false, external: false },
+  { name: "About", href: "/about", description: "A simple application letter fetching the current date", image: `${applicationLetter}`, current: false, external: false },
   {
     name: "404",
     href: "/whatever",
     description: "An error page fetching data from an API concerning errors",
     image: "https://source.unsplash.com/random?auto=format&fit=crop&w=334&q=80",
     current: false,
+    external: false,
+  },
+  {
+    name: "Quotes passing by",
+    href: "https://629357e7307cc533c4203701--deluxe-rabanadas-209759.netlify.app/",
+    description: "Quotes passing you by, like live. made with ant design, an fetch api and some custom css transitions",
+    image: "https://source.unsplash.com/50x50/?quotes",
+    current: false,
+    external: true,
   },
 ];
 
@@ -28,9 +37,16 @@ const Exercises = () => {
               <div>
                 <h2 className='text-gray-600 text-2xl font-semibold'>{item.name}</h2>
                 <p className='mt-2 text-gray-600'>{item.description}</p>
-                <Link to={item.href} className={"text-xl font-medium text-linkedin underline flex justify-center shadow-lg bg-grey-100 hover:bg-grey-900 hover:text-white rounded-lg mt-2 pt-1 pb-2"}>
+                {!item.external && (  
+                  <Link to={item.href} className={"text-xl font-medium text-linkedin underline flex justify-center shadow-lg bg-grey-100 hover:bg-grey-900 hover:text-white rounded-lg mt-2 pt-1 pb-2"}>
                   Check
                 </Link>
+                  )}
+                {item.external && (  
+                  <a href={item.href} className={"text-xl font-medium text-linkedin underline flex justify-center shadow-lg bg-grey-100 hover:bg-grey-900 hover:text-white rounded-lg mt-2 pt-1 pb-2"}>
+                  Check
+                </a>
+                  )}
               </div>
             </div>
           </li>

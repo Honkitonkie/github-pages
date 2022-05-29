@@ -15,6 +15,7 @@ const Main = () => {
         <Route exact path='/about' element={<About />}></Route>
         <Route exact path='/exercises/' element={<Exercises />}></Route>
         <Route exact path='/exercises/dropdown' element={<Dropdown />}></Route>
+        {/* <Route exact path='/exercises/quotes' element={<Quotes />}></Route> */}
         <Route path='/*' element={<Error />}></Route>
       </Routes>
     </div>

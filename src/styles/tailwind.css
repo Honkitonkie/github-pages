@@ -1152,9 +1152,9 @@ input[type=file]::file-selector-button:hover{
   color: rgb(245 245 245 / var(--tw-text-opacity));
 }
 
-.text-gray-300{
+.text-gray-100{
   --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
+  color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 
 .text-gray-600{
