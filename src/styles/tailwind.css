@@ -768,10 +768,6 @@ input[type=file]::file-selector-button:hover{
   display: block;
 }
 
-.inline{
-  display: inline;
-}
-
 .flex{
   display: flex;
 }
