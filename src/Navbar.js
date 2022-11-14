@@ -12,7 +12,6 @@ const navigation = [
   { name: "Contact", href: "mailto:info@automatin.nl", external: true },
 ];
 
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -23,7 +22,6 @@ export default function Navbar() {
   const changeCurrent = function (index) {
     setCurrent(navigation[index]);
   };
-
 
   return (
     <Disclosure
@@ -56,7 +54,8 @@ export default function Navbar() {
                           onClick={() => {
                             changeCurrent(navigation[index]);
                           }}
-                          target="_blank"
+                          target='_blank'
+                          rel='noreferrer'
                           className={classNames(
                             current ? "bg-grey-100 text-grey-900 hover:ring-2 hover:ring-grey-100" : "text-grey-100 hover:bg-grey-100 hover:text-grey-900",
                             "px-3 py-2 rounded-md text-sm font-medium"
@@ -95,7 +94,8 @@ export default function Navbar() {
                   {item.external && (
                     <Disclosure.Button
                       as='a'
-                      target="_blank"
+                      target='_blank'
+                      rel='noreferrer'
                       onClick={() => {
                         changeCurrent(navigation[index]);
                       }}

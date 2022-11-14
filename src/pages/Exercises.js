@@ -21,9 +21,18 @@ const exercises = [
     current: false,
     external: true,
   },
+  {
+    name: "Glowing",
+    href: "glowing",
+    description: "Some characters shine more brightly than others",
+    image: "https://source.unsplash.com/50x50/?shine",
+    current: false,
+    external: false,
+  },
 ];
 
 const Exercises = () => {
+  console.log(exercises);
   return (
     <div className='container mx-auto'>
       <h1 className='text-center text-grey-100 lg:text-grey-900 py-4 leading-3 text-2xl font-semibold'>Some React exercises I've done</h1>
@@ -37,16 +46,16 @@ const Exercises = () => {
               <div>
                 <h2 className='text-gray-600 text-2xl font-semibold'>{item.name}</h2>
                 <p className='mt-2 text-gray-600'>{item.description}</p>
-                {!item.external && (  
+                {!item.external && (
                   <Link to={item.href} className={"text-xl font-medium text-linkedin underline flex justify-center shadow-lg bg-grey-100 hover:bg-grey-900 hover:text-white rounded-lg mt-2 pt-1 pb-2"}>
-                  Check
-                </Link>
-                  )}
-                {item.external && (  
+                    Check
+                  </Link>
+                )}
+                {item.external && (
                   <a href={item.href} className={"text-xl font-medium text-linkedin underline flex justify-center shadow-lg bg-grey-100 hover:bg-grey-900 hover:text-white rounded-lg mt-2 pt-1 pb-2"}>
-                  Check
-                </a>
-                  )}
+                    Check
+                  </a>
+                )}
               </div>
             </div>
           </li>
