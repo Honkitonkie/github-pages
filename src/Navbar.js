@@ -10,6 +10,7 @@ const navigation = [
   { name: "Exercises", href: "/exercises", external: false },
   { name: "Projects", href: "https://www.projects.automatin.nl", external: true },
   { name: "Contact", href: "mailto:info@automatin.nl", external: true },
+  { name: "Other work", href: "/otherWork", external: false },
 ];
 
 function classNames(...classes) {

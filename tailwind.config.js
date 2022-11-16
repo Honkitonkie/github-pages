@@ -2,15 +2,6 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      animation: {
-        glow: "glow 1s ease-in-out infinite alternate",
-      },
-      keyframes: {
-        glow: {
-          from: { textShadow: "0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0077b5, 0 0 40px #0077b5, 0 0 50px #0077b5, 0 0 60px #0077b5, 0 0 70px #0077b5;" },
-          to: { textShadow: "0 0 20px #fff, 0 0 30px #0995cc, 0 0 40px #0995cc, 0 0 50px #0995cc, 0 0 60px #0995cc, 0 0 70px #0995cc, 0 0 80px #0995cc;" },
-        },
-      },
       container: {
         padding: {
           center: true,
