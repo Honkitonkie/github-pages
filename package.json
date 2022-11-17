@@ -2,6 +2,7 @@
   "homepage": "http://Honkitonkie.github.io/github-pages/",
   "name": "portfolio",
   "version": "0.1.0",
+  "node": "16.0.0",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.3",

@@ -11,6 +11,22 @@ const links = [
     external: true,
   },
   {
+    name: "Major projects",
+    href: "https://www.projects.automatin.nl",
+    description: "A compilation of some of the bigger projects I've worked on.",
+    image: "https://source.unsplash.com/50x50/?project",
+    current: false,
+    external: true,
+  },
+  {
+    name: "Marketing",
+    href: "https://marketing.automatin.nl/",
+    description: "Coming from a non developer background, I've made this website advocate my Marketing skills.",
+    image: "https://source.unsplash.com/50x50/?suited",
+    current: false,
+    external: true,
+  },
+  {
     name: "Patientje",
     href: "https://www.patientje.nl/",
     description: "A simple landing page using Bootstrap with a P5.js animation",
